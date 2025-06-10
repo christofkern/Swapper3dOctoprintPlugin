@@ -384,7 +384,7 @@ def Stow_Wiper(plugin):
 def try_handshake(plugin):
     # Identify the available Arduino ports. The list only includes ports with 'Arduino Uno' in their description.
     # This avoids connecting to other devices and interfering with the printer connection.
-    arduino_ports = [port.device for port in serial.tools.list_ports.comports() if 'Arduino Uno' in port.description]
+    arduino_ports = [port.device for port in serial.tools.list_ports.comports() if 'Arduino' in port.description]
 
     # If no Arduino ports are found, return an error message.
     if not arduino_ports:
